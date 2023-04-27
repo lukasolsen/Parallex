@@ -1,139 +1,139 @@
 import "./Effects/water.css";
 
 export default function Water() {
-  return (
-    <>
-      <div class="top">
-        <div class="stars">
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-          <div class="star"></div>
-        </div>
-        <div class="shooting-star"></div>
-        <div class="clouds">
-          <div class="cloud"></div>
-          <div class="cloud"></div>
-          <div class="cloud"></div>
-        </div>
-        <div class="sun">
-          <div class="sun-glow-1"></div>
-          <div class="sun-glow-2"></div>
-          <div class="sun-glow-3"></div>
-        </div>
-        <div class="pyramids">
-          <div class="pyramid"></div>
-          <div class="pyramid"></div>
-          <div class="pyramid"></div>
-          <div class="pyramid"></div>
-        </div>
-      </div>
-      <div class="bottom">
-        <div class="boat">
-          <div class="boat-bottom">
-            <div class="squares">
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square"></div>
+    return (
+        <>
+            <div className="mainWaterComponent">
+                <div className="top">
+                    <div className="stars">
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                        <div className="star"></div>
+                    </div>
+                    <div className="shooting-star"></div>
+                    <div className="clouds">
+                        <div className="cloud"></div>
+                        <div className="cloud"></div>
+                        <div className="cloud"></div>
+                    </div>
+                    <div className="sun">
+                        <div className="sun-glow-1"></div>
+                        <div className="sun-glow-2"></div>
+                        <div className="sun-glow-3"></div>
+                    </div>
+                    <div className="pyramids">
+                        <div className="pyramid"></div>
+                        <div className="pyramid"></div>
+                        <div className="pyramid"></div>
+                        <div className="pyramid"></div>
+                    </div>
+                </div>
+                <div className="bottom">
+                    <div className="boat">
+                        <div className="boat-bottom">
+                            <div className="squares">
+                                <div className="square"></div>
+                                <div className="square"></div>
+                                <div className="square"></div>
+                                <div className="square"></div>
+                            </div>
+                        </div>
+                        <div className="boat-behind"></div>
+                        <div className="boat-top-left"></div>
+                        <div className="boat-top-right"></div>
+                    </div>
+                    <div className="boat">
+                        <div className="boat-bottom">
+                            <div className="squares">
+                                <div className="square"></div>
+                                <div className="square"></div>
+                                <div className="square"></div>
+                                <div className="square"></div>
+                            </div>
+                        </div>
+                        <div className="boat-behind"></div>
+                        <div className="boat-top-left"></div>
+                        <div className="boat-top-right"></div>
+                    </div>
+                    <div className="main-sun-reflexion">
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                        <div className="reflexion-shape"></div>
+                    </div>
+                    <div className="small-sun-reflexions">
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                        <div className="reflexion"></div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="boat-behind"></div>
-          <div class="boat-top-left"></div>
-          <div class="boat-top-right"></div>
-        </div>
-        <div class="boat">
-          <div class="boat-bottom">
-            <div class="squares">
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-            </div>
-          </div>
-          <div class="boat-behind"></div>
-          <div class="boat-top-left"></div>
-          <div class="boat-top-right"></div>
-        </div>
-        <div class="main-sun-reflexion">
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-          <div class="reflexion-shape"></div>
-        </div>
-        <div class="small-sun-reflexions">
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-          <div class="reflexion"></div>
-        </div>
-      </div>
-
-      <div class="all-elements"></div>
-    </>
-  );
+        </>
+    );
 }
