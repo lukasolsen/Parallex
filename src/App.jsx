@@ -1,6 +1,7 @@
 import React, { useEffect, useState, Suspense, useRef } from "react";
 import "./style.css";
 import Duck from "./components/Earth";
+import Water from "./components/Water";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { useSpring, animated } from "@react-spring/web";
@@ -23,12 +24,12 @@ export default class Scroll extends React.Component {
     return (
       <Parallax
         ref={(ref) => (this.parallax = ref)}
-        pages={4}
+        pages={10}
         style={{ backgroundColor: "#253237", userSelect: "none" }}
       >
         {/* The pink background */}
         <ParallaxLayer
-          offset={0.87}
+          offset={2}
           factor={1.6}
           speed={0}
           style={{ backgroundColor: "#805E73" }}
@@ -95,13 +96,14 @@ export default class Scroll extends React.Component {
         />
 
         {/* The clouds at transfers at second image */}
-        <ParallaxLayer offset={2} speed={0.2} style={{ opacity: 0.2 }}>
+        <ParallaxLayer offset={2.1} speed={0} style={{ opacity: 1 }}>
           <img
             src={url("cloud")}
             style={{
               display: "block",
               width: "15%",
               marginLeft: "10%",
+              transform: "scale(1.3)",
             }}
           />
           <img
@@ -114,70 +116,8 @@ export default class Scroll extends React.Component {
           />
         </ParallaxLayer>
 
-        {/* Not sure what this does, but starts at second image, and has a speed of negative. [Satelite i guess]*/}
-        <ParallaxLayer
-          offset={1.3}
-          speed={-0.3}
-          style={{ pointerEvents: "none" }}
-        >
-          <img
-            src={url("satellite4")}
-            style={{ width: "15%", marginLeft: "70%" }}
-          />
-        </ParallaxLayer>
-
-        {/* The earth at the end of the page */}
-        <ParallaxLayer
-          offset={2.5}
-          speed={-0.4}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            pointerEvents: "none",
-          }}
-        >
-          <img src={url("earth")} style={{ width: "60%" }} />
-        </ParallaxLayer>
-
-        {/* The earth at the end of the page */}
-        <ParallaxLayer
-          offset={2}
-          speed={-0.3}
-          style={{
-            backgroundSize: "80%",
-            backgroundPosition: "center",
-            backgroundImage: url("clients", true),
-          }}
-        />
-
-        {/* The small server looking window at the middle page. */}
-        <ParallaxLayer
-          offset={1}
-          speed={0.1}
-          onClick={() => this.parallax.scrollTo(2)}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <img src={url("bash")} style={{ width: "40%" }} />
-        </ParallaxLayer>
-
-        {/* The big server looking window at the last page. */}
-        <ParallaxLayer
-          offset={2}
-          speed={-0}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-          onClick={() => this.parallax.scrollTo(0)}
-        >
-          <img src={url("clients-main")} style={{ width: "40%" }} />
-          <h3>Hello World</h3>
+        <ParallaxLayer offset={2.4} factor={5}>
+          <Water />
         </ParallaxLayer>
       </Parallax>
     );
