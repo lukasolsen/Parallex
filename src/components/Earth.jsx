@@ -9,6 +9,8 @@ import { FilmPass } from "three/addons/postprocessing/FilmPass.js";
 import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
 import { GammaCorrectionShader } from "three/addons/shaders/GammaCorrectionShader.js";
 export default function Earth() {
+    const DEFAULT_PATH = "/Parallex/";
+
     const radius = 6371;
     const tilt = 0.41;
     const rotationSpeed = 0.02;
@@ -57,12 +59,14 @@ export default function Earth() {
         const materialNormalMap = new THREE.MeshPhongMaterial({
             specular: 0x7c7c7c,
             shininess: 15,
-            map: textureLoader.load("/textures/planets/earth_atmos_2048.jpg"),
+            map: textureLoader.load(
+                DEFAULT_PATH + "textures/planets/earth_atmos_2048.jpg"
+            ),
             specularMap: textureLoader.load(
-                "/textures/planets/earth_specular_2048.jpg"
+                DEFAULT_PATH + "textures/planets/earth_specular_2048.jpg"
             ),
             normalMap: textureLoader.load(
-                "/textures/planets/earth_normal_2048.jpg"
+                DEFAULT_PATH + "textures/planets/earth_normal_2048.jpg"
             ),
 
             // y scale is negated to compensate for normal map handedness.
@@ -82,7 +86,9 @@ export default function Earth() {
         // clouds
 
         const materialClouds = new THREE.MeshLambertMaterial({
-            map: textureLoader.load("/textures/planets/earth_clouds_1024.png"),
+            map: textureLoader.load(
+                DEFAULT_PATH + "textures/planets/earth_clouds_1024.png"
+            ),
             transparent: true,
         });
         materialClouds.map.colorSpace = THREE.SRGBColorSpace;
@@ -95,7 +101,9 @@ export default function Earth() {
         // moon
 
         const materialMoon = new THREE.MeshPhongMaterial({
-            map: textureLoader.load("/textures/planets/moon_1024.jpg"),
+            map: textureLoader.load(
+                DEFAULT_PATH + "textures/planets/moon_1024.jpg"
+            ),
         });
         materialMoon.map.colorSpace = THREE.SRGBColorSpace;
 
