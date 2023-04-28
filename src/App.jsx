@@ -66,7 +66,7 @@ export default class Scroll extends React.Component {
 
         <ParallaxLayer
           offset={1}
-          factor={1.5}
+          factor={1.0}
           speed={-0.4}
           style={{ background: "#000000" }}
         />
@@ -119,7 +119,7 @@ export default class Scroll extends React.Component {
           />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={2.4} style={{ backgroundColor: "#999999" }}>
+        <ParallaxLayer offset={2.4}>
           <Water />
         </ParallaxLayer>
 
