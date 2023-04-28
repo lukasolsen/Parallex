@@ -25,7 +25,7 @@ export default class Scroll extends React.Component {
       <Parallax
         ref={(ref) => (this.parallax = ref)}
         pages={10}
-        style={{ backgroundColor: "#253237", userSelect: "none" }}
+        style={{ backgroundColor: "#000000", userSelect: "none" }}
       >
         {/* The pink background */}
         <ParallaxLayer
@@ -89,9 +89,14 @@ export default class Scroll extends React.Component {
           />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={2.4} factor={5}>
+        <ParallaxLayer offset={2.4} style={{ backgroundColor: "#999999" }}>
           <Water />
         </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={3.4}
+          style={{ backgroundColor: "#7e0e68" }}
+        ></ParallaxLayer>
         <Earth />
       </Parallax>
     );
