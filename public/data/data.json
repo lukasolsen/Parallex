@@ -1,10 +1,12 @@
 {
-  "info": [
+  "sections": [
     {
-      "bilde": "negerbolle123.com/bilde",
-      "text": "e",
-      "dato": "a",
-      "hoverfarge": ""
+      "title": "",
+      "date": "",
+      "location": "",
+      "time": "",
+      "image": "",
+      "imagePlaceholder": ""
     }
   ]
 }

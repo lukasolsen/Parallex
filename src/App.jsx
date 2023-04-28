@@ -8,6 +8,8 @@ import { Canvas } from "@react-three/fiber";
 import ScrollShow from "./components/ScrollShow";
 import { OrbitControls } from "@react-three/drei";
 import Earth from "./components/Earth";
+import { motion } from "framer-motion";
+
 const url = (name, wrap = false) =>
   `${
     wrap ? "url(" : ""
@@ -15,8 +17,26 @@ const url = (name, wrap = false) =>
     wrap ? ")" : ""
   }`;
 
-const handleScroll = () => {
-  console.log("scrolling");
+// Card animation.
+const cardVariants = {
+  offscreen: {
+    rotate: 0,
+    scale: 1.0,
+    x: 0,
+  },
+  onscreen: {
+    rotate: 10,
+    x: 30,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+  hover: {
+    rotate: 0,
+    scale: 1.1,
+  },
 };
 
 export default class Scroll extends React.Component {
@@ -52,11 +72,21 @@ export default class Scroll extends React.Component {
         />
 
         {/* The earth */}
-        <ParallaxLayer offset={0} speed={0.7} onScroll={handleScroll}>
+        <ParallaxLayer offset={0} speed={0.7}>
           <canvas
             style={{ height: "100vh", width: "100vw" }}
             id="earthCanvas"
           ></canvas>
+          <img
+            src="https://cdn.discordapp.com/attachments/1022090845865918545/1101467754302816256/MiljoUkaLogo.png_thumbnail.png"
+            className="absolute"
+            style={{
+              top: "50px",
+              left: "165px",
+              transform: "scale(0.5)",
+              userDrag: "none",
+            }}
+          />
 
           <ScrollShow />
         </ParallaxLayer>
@@ -95,8 +125,33 @@ export default class Scroll extends React.Component {
 
         <ParallaxLayer
           offset={3.4}
+          speed={-0.001}
           style={{ backgroundColor: "#7e0e68" }}
-        ></ParallaxLayer>
+        >
+          <motion.div
+            className="rounded-2xl w-80 h-80 bg-slate-950 shadow-slate-950 shadow-sm text-white dark:invert-0"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+            whileHover="hover"
+            variants={cardVariants}
+          >
+            <img src="https://media.discordapp.net/attachments/1022090845865918545/1101478064438915112/last_ned.jpg?width=1000&height=523" />
+            <div className="flex mt-6">
+              <div className="row w-44 text-center align-middle">
+                <h3>26</h3>
+                <span className="mt-72">April</span>
+              </div>
+              <div className="row">
+                <h1 className="font-medium text-1xl text-center">
+                  Bærekraftige klesforhold - tilpasning, omsøm og drømmeplagg v/
+                  Sigrid Løvlie
+                </h1>
+                <span className="font-thin mt-4">Uff x Resirkula, Sy-den</span>
+              </div>
+            </div>
+          </motion.div>
+        </ParallaxLayer>
         <Earth />
       </Parallax>
     );
