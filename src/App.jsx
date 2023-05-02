@@ -18,7 +18,7 @@ const url = (name, wrap = false) =>
   }`;
 
 // Card animation.
-const cardVariants = {
+const leftCardVariants = {
   offscreen: {
     rotate: 0,
     scale: 1.0,
@@ -26,6 +26,27 @@ const cardVariants = {
   },
   onscreen: {
     rotate: 10,
+    x: 30,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+  hover: {
+    rotate: 0,
+    scale: 1.1,
+  },
+};
+
+const rightCardVariants = {
+  offscreen: {
+    rotate: 0,
+    scale: 1.0,
+    x: 0,
+  },
+  onscreen: {
+    rotate: -10,
     x: 30,
     transition: {
       type: "spring",
@@ -80,11 +101,13 @@ export default class Scroll extends React.Component {
           <img
             src="https://cdn.discordapp.com/attachments/1022090845865918545/1101467754302816256/MiljoUkaLogo.png_thumbnail.png"
             className="absolute"
+            height="50px"
             style={{
-              top: "50px",
-              left: "165px",
-              transform: "scale(0.5)",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
               userDrag: "none",
+              userSelect: "none",
             }}
           />
 
@@ -124,7 +147,8 @@ export default class Scroll extends React.Component {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3.4}
+          offset={3.2}
+          factor={5}
           speed={-0.001}
           style={{ backgroundColor: "#7e0e68" }}
         >
@@ -134,22 +158,62 @@ export default class Scroll extends React.Component {
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.8 }}
             whileHover="hover"
-            variants={cardVariants}
+            variants={leftCardVariants}
           >
-            <img src="https://media.discordapp.net/attachments/1022090845865918545/1101478064438915112/last_ned.jpg?width=1000&height=523" />
-            <div className="flex mt-6">
-              <div className="row w-44 text-center align-middle">
-                <h3>26</h3>
-                <span className="mt-72">April</span>
+            <a
+              href="https://www.hvaskjer.nu/hamar/informasjon/produkter/klesbyttemarked-i-hamar-kulturhus-p6695093"
+              target="_blank"
+              ref="noreferrer noopener"
+            >
+              <img src="https://media.discordapp.net/attachments/1022090845865918545/1101478064438915112/last_ned.jpg?width=1000&height=523" />
+              <div className="flex mt-6">
+                <div className="row w-44 text-center align-middle">
+                  <h3>26</h3>
+                  <span className="mt-72">April</span>
+                </div>
+                <div className="row">
+                  <h1 className="font-medium text-1xl text-center">
+                    Bærekraftige klesforhold - tilpasning, omsøm og drømmeplagg
+                    v/ Sigrid Løvlie
+                  </h1>
+                  <span className="font-thin mt-4">
+                    Uff x Resirkula, Sy-den
+                  </span>
+                </div>
               </div>
-              <div className="row">
-                <h1 className="font-medium text-1xl text-center">
-                  Bærekraftige klesforhold - tilpasning, omsøm og drømmeplagg v/
-                  Sigrid Løvlie
-                </h1>
-                <span className="font-thin mt-4">Uff x Resirkula, Sy-den</span>
+            </a>
+          </motion.div>
+
+          <motion.div
+            className="rounded-2xl w-80 h-80 bg-slate-950 shadow-slate-950 shadow-sm text-white dark:invert-0"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+            style={{ marginTop: "80px", marginLeft: "70%" }}
+            whileHover="hover"
+            variants={rightCardVariants}
+          >
+            <a
+              href="https://www.hvaskjer.nu/hamar/informasjon/produkter/klesbyttemarked-i-hamar-kulturhus-p6695093"
+              target="_blank"
+              ref="noreferrer noopener"
+            >
+              <img src="https://media.discordapp.net/attachments/1022090845865918545/1101478399047905371/last_ned_6.jpg?width=885&height=463" />
+              <div className="flex mt-6">
+                <div className="row w-44 text-center align-middle">
+                  <h3>26</h3>
+                  <span className="mt-72">April</span>
+                </div>
+                <div className="row">
+                  <h1 className="font-medium text-1xl text-center">
+                    Hei v/ Sigrid Løvlie
+                  </h1>
+                  <span className="font-thin mt-4">
+                    Uff x Resirkula, Sy-den
+                  </span>
+                </div>
               </div>
-            </div>
+            </a>
           </motion.div>
         </ParallaxLayer>
         <Earth />
