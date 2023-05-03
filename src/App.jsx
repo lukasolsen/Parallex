@@ -65,7 +65,7 @@ export default class Scroll extends React.Component {
     return (
       <Parallax
         ref={(ref) => (this.parallax = ref)}
-        pages={10}
+        pages={6}
         style={{ backgroundColor: "#000000", userSelect: "none" }}
       >
         {/* The pink background */}
@@ -78,7 +78,7 @@ export default class Scroll extends React.Component {
         {/* The top background */}
         <ParallaxLayer
           offset={0}
-          factor={1}
+          factor={0.5}
           speed={0}
           style={{
             background: "#000000",
@@ -86,8 +86,8 @@ export default class Scroll extends React.Component {
         />
 
         <ParallaxLayer
-          offset={1}
-          factor={1.0}
+          offset={0.5}
+          factor={1}
           speed={-0.4}
           style={{ background: "#000000" }}
         />
@@ -116,7 +116,7 @@ export default class Scroll extends React.Component {
 
         {/* The clouds at transfers at second image */}
         <ParallaxLayer
-          offset={2.1}
+          offset={1.3}
           factor={0.3}
           speed={-0.1}
           style={{ opacity: 1, zIndex: 40 }}
@@ -142,12 +142,12 @@ export default class Scroll extends React.Component {
           />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={2.4}>
+        <ParallaxLayer offset={1.8}>
           <Water />
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3.2}
+          offset={2.6}
           factor={5}
           speed={-0.001}
           style={{ backgroundColor: "#7e0e68" }}
