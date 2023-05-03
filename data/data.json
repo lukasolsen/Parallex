@@ -1,12 +1,3 @@
 {
-  "sections": [
-    {
-      "title": "",
-      "date": "",
-      "location": "",
-      "time": "",
-      "image": "",
-      "imagePlaceholder": ""
-    }
-  ]
+  "ip_addresses": []
 }
