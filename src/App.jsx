@@ -17,6 +17,29 @@ const url = (name, wrap = false) =>
     wrap ? ")" : ""
   }`;
 
+let isMusicPlaying = false;
+let isRadioPlaying = false;
+
+const musicPlay = () => {
+  if (isMusicPlaying) {
+    document.getElementById("music").pause();
+    isMusicPlaying = false;
+  } else {
+    document.getElementById("music").play();
+    isMusicPlaying = true;
+  }
+};
+
+const radioPlay = () => {
+  if (isRadioPlaying) {
+    document.getElementById("radio").pause();
+    isRadioPlaying = false;
+  } else {
+    document.getElementById("radio").play();
+    isRadioPlaying = true;
+  }
+};
+
 // Card animation.
 const leftCardVariants = {
   offscreen: {
@@ -121,8 +144,23 @@ export default class Scroll extends React.Component {
           speed={-0.1}
           style={{ opacity: 1, zIndex: 40 }}
         >
+          <audio id="music">
+            <source
+              id="musicLink"
+              src="https://dfm-dfmrusdance.hostingradio.ru/dfmrusdance96.aacp?a555a63f"
+              type="audio/aac"
+            />
+          </audio>
+
+          <audio id="radio">
+            <source
+              src="https://dfm-gangstadeep.hostingradio.ru/gangstadeep96.aacp?e2f53e03"
+              type="audio/aac"
+            />
+          </audio>
           <img
             src={url("cloud")}
+            onClick={musicPlay}
             style={{
               display: "block",
               width: "15%",
@@ -133,6 +171,7 @@ export default class Scroll extends React.Component {
           />
           <img
             src={url("cloud")}
+            onClick={radioPlay}
             style={{
               display: "block",
               width: "20%",
