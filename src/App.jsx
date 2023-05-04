@@ -9,6 +9,9 @@ import ScrollShow from "./components/ScrollShow";
 import { OrbitControls } from "@react-three/drei";
 import Earth from "./components/Earth";
 import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
 
 const url = (name, wrap = false) =>
   `${
@@ -324,3 +327,5 @@ export default class Scroll extends React.Component {
     );
   }
 }
+
+AOS.init();
