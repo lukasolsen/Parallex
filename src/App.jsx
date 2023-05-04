@@ -254,6 +254,70 @@ export default class Scroll extends React.Component {
               </div>
             </a>
           </motion.div>
+
+          <motion.div
+            className="rounded-2xl w-80 h-80 bg-slate-950 shadow-slate-950 shadow-sm text-white dark:invert-0"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+            style={{ marginTop: "160px", marginLeft: "50%" }}
+            whileHover="hover"
+            variants={rightCardVariants}
+          >
+            <a
+              href="https://www.hvaskjer.nu/hamar/informasjon/produkter/klesbyttemarked-i-hamar-kulturhus-p6695093"
+              target="_blank"
+              ref="noreferrer noopener"
+            >
+              <img src="https://media.discordapp.net/attachments/1022090845865918545/1101478399047905371/last_ned_6.jpg?width=885&height=463" />
+              <div className="flex mt-6">
+                <div className="row w-44 text-center align-middle">
+                  <h3>26</h3>
+                  <span className="mt-72">Kule bilder :D</span>
+                </div>
+                <div className="row">
+                  <h1 className="font-medium text-1xl text-center">
+                    Hei v/ Sigrid Løvlie
+                  </h1>
+                  <span className="font-thin mt-4">
+                    Uff x Resirkula, Sy-den
+                  </span>
+                </div>
+              </div>
+            </a>
+          </motion.div>
+
+          <motion.div
+            className="rounded-2xl w-80 h-80 bg-slate-950 shadow-slate-950 shadow-sm text-white dark:invert-0"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+            style={{ marginTop: "220px", marginLeft: "65%" }}
+            whileHover="hover"
+            variants={rightCardVariants}
+          >
+            <a
+              href="https://www.hvaskjer.nu/hamar/informasjon/produkter/klesbyttemarked-i-hamar-kulturhus-p6695093"
+              target="_blank"
+              ref="noreferrer noopener"
+            >
+              <img src="https://media.discordapp.net/attachments/1022090845865918545/1101478399047905371/last_ned_6.jpg?width=885&height=463" />
+              <div className="flex mt-6">
+                <div className="row w-44 text-center align-middle">
+                  <h3>26</h3>
+                  <span className="mt-72">Kule byesilder :D</span>
+                </div>
+                <div className="row">
+                  <h1 className="font-medium text-1xl text-center">
+                    Hei v/ Sigrid Løvlie
+                  </h1>
+                  <span className="font-thin mt-4">
+                    Uff x Resirkula, Sy-den
+                  </span>
+                </div>
+              </div>
+            </a>
+          </motion.div>
         </ParallaxLayer>
         <Earth />
       </Parallax>
